@@ -1,18 +1,12 @@
-export default function ProductTableRow() {
+export default function ProductTableRow({ products }) {
   return (
     <>
-      <tr>
-        <td>Apple </td>
-        <td>$1</td>
-      </tr>
-      <tr>
-        <td>Dragonfruit </td>
-        <td>$1</td>
-      </tr>
-      <tr>
-        <td>Passionfruit </td>
-        <td>$2</td>
-      </tr>
+      {products.map(product => (
+        <tr key={product.name}>
+          <td>{product.name} </td>
+          <td>{product.price}</td>
+        </tr>
+      ))}
     </>
   )
 }

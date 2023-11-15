@@ -1,7 +1,7 @@
 import ProductTableRow from './ProductTableRow'
 import ProductTableCategory from './ProductTableCategory'
 
-export default function ProductTable() {
+export default function ProductTable({ products, filterText, inStockOnly }) {
   return (
     <div>
       <table>
@@ -11,9 +11,13 @@ export default function ProductTable() {
             <th>Price</th>
           </tr>
           <ProductTableCategory category="Fruits" />
-          <ProductTableRow />
+          <ProductTableRow
+            products={[...products.filter(x => x.category == 'Fruits')]}
+          />
           <ProductTableCategory category="Vegetables" />
-          <ProductTableRow />
+          <ProductTableRow
+            products={[...products.filter(x => x.category == 'Vegetables')]}
+          />
         </tbody>
       </table>
     </div>
