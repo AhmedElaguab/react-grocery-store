@@ -5,7 +5,7 @@ export default function SearchBar({
   onInStockOnlyChange,
 }) {
   return (
-    <div>
+    <form>
       <div>
         <input
           className="search"
@@ -30,6 +30,6 @@ export default function SearchBar({
         />
         <label htmlFor="in-stock-only">Only show products on stock</label>
       </div>
-    </div>
+    </form>
   )
 }
