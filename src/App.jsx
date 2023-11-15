@@ -18,18 +18,20 @@ export default function App() {
   const [inStockOnly, setInStockOnly] = useState(false)
 
   return (
-    <div className="App">
-      <SearchBar
-        filterText={filterText}
-        inStockOnly={inStockOnly}
-        onFilterTextChange={setFilterText}
-        onInStockOnlyChange={setInStockOnly}
-      />
-      <ProductTable
-        products={products}
-        filterText={filterText}
-        inStockOnly={inStockOnly}
-      />
+    <div className="flex justify-center">
+      <div className="w-96 border-2 p-4 rounded-lg mt-10">
+        <SearchBar
+          filterText={filterText}
+          inStockOnly={inStockOnly}
+          onFilterTextChange={setFilterText}
+          onInStockOnlyChange={setInStockOnly}
+        />
+        <ProductTable
+          products={products}
+          filterText={filterText}
+          inStockOnly={inStockOnly}
+        />
+      </div>
     </div>
   )
 }
