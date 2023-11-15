@@ -1,4 +1,4 @@
-export default function ProductTableRow({ products }) {
+export default function ProductTableList({ products }) {
   return (
     <>
       {products.map(product => (
