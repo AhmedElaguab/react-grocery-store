@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div className="flex justify-center">
-      <div className="w-96 border-2 p-4 rounded-lg mt-10">
+      <div className="w-96 p-4 rounded-lg shadow-lg mt-10 bg-white">
         <SearchBar
           filterText={filterText}
           inStockOnly={inStockOnly}
