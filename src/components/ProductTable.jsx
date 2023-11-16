@@ -30,5 +30,13 @@ export default function ProductTable({ products, filterText, inStockOnly }) {
     }
   })
 
-  return <div>{categoriesContent}</div>
+  return (
+    <div>
+      {categoriesContent.length > 0 ? (
+        categoriesContent
+      ) : (
+        <p className="mt-10">Sorry, Nothing found!</p>
+      )}
+    </div>
+  )
 }
