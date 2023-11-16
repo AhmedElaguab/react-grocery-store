@@ -30,11 +30,5 @@ export default function ProductTable({ products, filterText, inStockOnly }) {
     }
   })
 
-  return (
-    <div>
-      <table>
-        <tbody>{categoriesContent}</tbody>
-      </table>
-    </div>
-  )
+  return <div>{categoriesContent}</div>
 }
